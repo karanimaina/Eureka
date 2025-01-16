@@ -55,3 +55,5 @@
 2025-01-16 14:15:39,567 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 0ms
 2025-01-16 14:16:39,572 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 4ms
 2025-01-16 14:17:39,573 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 0ms
+2025-01-16 14:18:39,574 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 1ms
+2025-01-16 14:19:39,590 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 16ms
