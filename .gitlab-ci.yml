@@ -1,0 +1,39 @@
+stages:
+  - prebuild
+  - build
+
+build-esb-eureka-server-builder:
+  stage: prebuild
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - /kaniko/executor
+      --context "$CI_PROJECT_DIR"
+      --dockerfile "builder.Dockerfile"
+      --destination "devops-registry.ekenya.co.ke/esb/eureka-server-builder:latest"
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'development'
+      changes:
+        - pom.xml
+    - if: $CI_COMMIT_BRANCH == 'cicd-testing'
+      changes:
+        - pom.xml
+    
+build-esb-eureka-server-service:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'development'
+      variables:
+        IMAGE_TAG: "latest"
+    - if: $CI_COMMIT_BRANCH == 'cicd-testing'
+      variables:
+        IMAGE_TAG: "test"
+  script:
+    - /kaniko/executor
+      --context "$CI_PROJECT_DIR"
+      --dockerfile "Dockerfile"
+      --destination devops-registry.ekenya.co.ke/esb/esb-eureka-server:$IMAGE_TAG
