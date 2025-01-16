@@ -53,3 +53,5 @@
 2025-01-16 14:14:49,366 INFO [http-nio-9713-exec-3] c.n.e.r.AbstractInstanceRegistry:271 Registered instance AUTHENTICATION/authentication:a896783d1e39ae5246028934e534d6be with status UP (replication=false)
 2025-01-16 14:14:49,970 INFO [http-nio-9713-exec-5] c.n.e.r.AbstractInstanceRegistry:271 Registered instance AUTHENTICATION/authentication:a896783d1e39ae5246028934e534d6be with status UP (replication=true)
 2025-01-16 14:15:39,567 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 0ms
+2025-01-16 14:16:39,572 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 4ms
+2025-01-16 14:17:39,573 INFO [Eureka-EvictionTimer] c.n.e.r.AbstractInstanceRegistry$EvictionTask:1252 Running the evict task with compensationTime 0ms
